@@ -19,6 +19,7 @@ import {userSlice} from "../../store/reducers/UserSlice";
 import {useDispatch} from "react-redux";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {fetchUsers} from "../../store/reducers/ActionCreators";
+import PostContainer from "../PostContainer";
 
 
 const Work = () => {
@@ -103,9 +104,11 @@ const Work = () => {
                 {/*    <WorkItem workItem={workItem} key={workItem.id} />*/}
                 {/*)}*/}
 
-                {isLoading && <h1>Идет загрузка</h1>}
-                {error && <h1>{error}</h1>}
-                {JSON.stringify(users, null, 2)}
+                {/*{isLoading && <h1>Идет загрузка</h1>}*/}
+                {/*{error && <h1>{error}</h1>}*/}
+                {/*{JSON.stringify(users, null, 2)}*/}
+
+                <PostContainer />
             </List>
         </React.Fragment>
     );
