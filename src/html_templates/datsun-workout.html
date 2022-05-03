@@ -1,0 +1,821 @@
+﻿
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Уличная Атлетика. Бери Выше! - TBWA Moscow (ru)</title>
+
+    <meta name="description"
+          content="TBWA is The Disruption® Company. Named Adweek’s 2018 Global Agency of the Year, our collective has 11,300 creative minds across 270 offices in 95 countries.">
+
+
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <!-- Open Graph tags to customize link previews -->
+    <meta property="og:url" content="https://www.tbwa.ru/ru/work/datsun-workout">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TBWA">
+    <!--<meta property="fb:app_id" content="1731508873846176" />-->
+    <meta property="og:description" content="Datsun &quot;Уличная атлетика. Бери выше!&quot; ">
+    <meta property="og:image" content="https://www.tbwa.ru/assets/work/DATSUN_ONDO_FITNESS_main_img.jpg">
+
+    <!-- video.js -->
+    <link href="../../vendor/video.js/video-js.css" rel="stylesheet">
+    <link href="../../vendor/video.js/videojs-playlist-ui.vertical.css" rel="stylesheet">
+    <!-- google fonts for language support
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext" rel="stylesheet">
+   -->
+    <link rel="stylesheet" href="../../styles/main.min.css">
+
+    <script src="../../ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="../../ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="../../ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+
+    <script src="../../ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+    <script src="../../api/player.js"></script>
+
+    <script src="../../vendor/video.js/videojs.min.js"></script>
+    <script src="../../vendor/video.js/videojs-playlist.min.js"></script>
+    <script src="../../vendor/video.js/videojs-playlist-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/global.min.js"></script>
+
+    <script>
+        var siteUrl = "https://www.tbwa.ru/";
+    </script>
+
+    <script type="text/javascript" src="../../js/article.min.js"></script>
+    <script type="text/javascript" src="../../js/article-video.min.js"></script>
+
+    <style type="text/css">
+        #logo.white-logo a {
+            background: url(../../assets/about/tbwa_logo_white.png) 0 0/contain no-repeat;
+        }
+
+        #logo.black-logo a {
+            background: url(../../assets/about/tbwa_logo_black.png) 0 0/contain no-repeat;
+        }
+
+        #logo a img {
+            height: 30px;
+            width: auto;
+            opacity: 0;
+        }
+
+        @media screen and (max-width: 64em) {
+            #logo.black-logo a {
+                height: 20px;
+            }
+
+            #logo.white-logo a {
+                height: 20px;
+                background: url(../../assets/about/tbwa_logo_black.png) 0 0/contain no-repeat;
+            }
+
+            #logo a img {
+                height: 20px;
+            }
+        }
+    </style>
+
+    <div id='js_cookieNotice' class='cookieNotice'>
+        <div class='cookieNotice__container'>
+            <p>
+                This website uses cookies to improve your experience.
+            </p>
+            <p>
+                <a id='js_cookieNotice_accept' href='#'>Accept</a>
+                <a id='js_cookieNotice_refuse' href='#'>Refuse</a>
+                <a href='../../privacy-policy.html'>Privacy Policy</a>
+            </p>
+
+        </div>
+    </div>
+
+    <style type='text/css'>
+        .cookieNotice {
+            background: #000;
+            display: none;
+            font-family: "Averta Bold", Open Sans Bold, Open Sans Hebrew Semibold, Helvetica Neue, sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 120%;
+            left: 0;
+            padding: 30px 60px 30px 0;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            s
+            color: #fff;
+            z-index: 100;
+        }
+
+        .cookieNotice__container {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .cookieNotice__container * {
+            margin: 0 1em;
+            float: left;
+        }
+
+        .cookieNotice__container a {
+            color: #fecc00;
+        }
+
+        .cookieNotice__container a h4 {
+            font-size: 1.2rem;
+        }
+
+        .cookieNotice p {
+            color: #fff;
+        }
+
+
+    </style>
+
+    <script type='text/javascript'>
+        function facebookLogout() {
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    FB.logout(function (response) {
+                        console.log(response)
+                    });
+                }
+            });
+        }
+
+        var elNotice = document.getElementById('js_cookieNotice')
+        var elAccept = document.getElementById('js_cookieNotice_accept')
+        var elRefuse = document.getElementById('js_cookieNotice_refuse')
+
+
+        function setCookie(name, value, days) {
+            var expiry = new Date()
+            expiry.setTime(expiry.getTime() + (days * 24 * 60 * 60 * 1000))
+            var expires = 'expires=' + expiry.toUTCString()
+            document.cookie = name + '=' + value + ';' + expires + ';' + 'path=/'
+        }
+
+        function getCookie(name) {
+            var name = name + '='
+            var decodedCookie = decodeURIComponent(document.cookie)
+            var ca = decodedCookie.split(';')
+
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i]
+
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1)
+                }
+
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length)
+                //if (c.indexOf(name) == 0) return true
+            }
+
+            return false
+        }
+
+        function cookieIsSet() {
+            return getCookie('cookieConsent')
+        }
+
+        function analyticsIsSet() {
+            return getCookie('acceptAnalytics')
+        }
+
+        function socialIsSet() {
+            return getCookie('acceptSocial')
+        }
+
+        function showNotice() {
+            elNotice.style.display = 'block'
+        }
+
+        function hideNotice() {
+            elNotice.style.display = 'none'
+        }
+
+        //this sets all cookies, recommended settings
+
+        function setAcceptCookie() {
+            setCookie('cookieConsent', '1', 365);
+            setAcceptAnalytics();
+            setAcceptSocial();
+
+        }
+
+        function setAcceptAnalytics() {
+            setCookie('acceptAnalytics', '1', 365)
+        }
+
+        function setAcceptSocial() {
+            setCookie('acceptSocial', '1', 365)
+        }
+
+        function vimeoOptOut() {
+            //remove vimeo cookies
+            setCookie('player', '', -1);
+
+        }
+
+        function eraseCookieFromAllPaths(name) {
+            // This function will attempt to remove a cookie from all paths.
+            var pathBits = location.pathname.split('/');
+            var pathCurrent = ' path=';
+
+            // do a simple pathless delete first.
+            document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
+
+            for (var i = 0; i < pathBits.length; i++) {
+                pathCurrent += ((pathCurrent.substr(-1) != '/') ? '/' : '') + pathBits[i];
+                document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;' + pathCurrent + ';';
+            }
+        }
+
+        function loadExternalScripts() {
+            //get craft sections
+
+
+            //check if anaylytics cookies are accepted
+
+            var fSeg = 'work';
+            var lSeg = 'datsun-workout';
+            var workk = 'https://www.tbwa.ru/ru/work'
+            if (document.cookie.split(';').filter((item) => item.includes('acceptAnalytics=1')).length) {
+
+
+                //     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                //       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                //       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                //       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                //     ga('create', '', 'auto');
+                //     ga('set', 'anonymizeIp', true);
+                //     ga('send', 'pageview');
+
+
+                // var head  = document.getElementsByTagName('head')[0];
+                // var gtagscript  = document.createElement('script');
+                // gtagscript.src= "https://www.googletagmanager.com/gtag/js?id=UA-4626987-2";
+                // gtagscript.async = true;
+                // head.appendChild(gtagscript);
+
+                // window.dataLayer = window.dataLayer || [];
+                // function gtag(){dataLayer.push(arguments);}
+                // gtag('js', new Date());
+                // gtag('config', 'UA-4626987-2');
+
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', '', 'auto');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+
+            } else {
+
+            }
+            //end analytics
+
+            //check if social cookies are accepted
+            if (document.cookie.split(';').filter((item) => item.includes('acceptSocial=1')).length) {
+                // console.log(socialIsSet())
+                //load FB
+
+                //load Twitter
+                window.twttr = (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+
+                    t._e = [];
+                    t.ready = function (f) {
+                        t._e.push(f);
+                    };
+
+                    return t;
+                }(document, "script", "twitter-wjs"));
+                //end twitter
+
+
+                //load article-video
+                articleVideo.init();
+
+                //end vimeo
+
+            }
+            //end of social
+
+            // convert data-src to src for iframes
+            var externalContents = document.querySelectorAll('[iframe-src]');
+            if (externalContents[0]) {
+                for (var i = 0; i < externalContents.length; i++) {
+                    var iframe = document.createElement('iframe');
+                    iframe.src = externalContents[i].getAttribute('iframe-src');
+
+                    iframe.frameborder = externalContents[i].getAttribute('frameborder');
+                    iframe.allowfullscreen = externalContents[i].getAttribute('allowfullscreen');
+                    // TODO convert more attribute or find better way to append all setted attributes and class to that element
+                    externalContents[i].parentNode.replaceWith(iframe, externalContents[i]);
+                }
+            }
+
+            // Custom content
+
+
+        }
+
+        window.onload = function () {
+
+
+            //console all cookies , remove after testing
+            var cookie = document.cookie.split(';');
+            for (var i = 0; i < cookie.length; i++) {
+
+                var chip = cookie[i],
+                    entry = chip.split("="),
+                    name = entry[0];
+
+                //console.log(chip, entry, name)
+            }
+
+            if (!cookieIsSet()) {
+                //console.log('cookie not set')
+                //console.log(cookieIsSet())
+                setTimeout(function () {
+                    showNotice()
+                }, 2000);
+            } else {
+
+                //console.log('cookkie is set')
+                loadExternalScripts();
+                //console.log(cookieIsSet())
+            }
+
+            elAccept.onclick = elAccept.ontouch = function (e) {
+                e.preventDefault();
+                hideNotice();
+                setAcceptCookie();
+                loadExternalScripts();
+            }
+
+            if (elRefuse) {
+                elRefuse.onclick = elRefuse.ontouch = function (e) {
+                    e.preventDefault();
+                    hideNotice();
+                }
+            }
+
+
+            //check for Analytics settings
+            var analyticsSelector = document.getElementById('gdrp-analytics-selector');
+            if (typeof (analyticsSelector) != 'undefined' && analyticsSelector != null) {
+
+                if (document.cookie.split(';').filter((item) => item.includes('acceptAnalytics=1')).length) {
+                    $('input#checkboxAnalytics').prop("checked", true);
+                } else {
+                    $('input#checkboxAnalytics').prop("checked", false);
+                }
+            }
+            //end analytics settings check
+
+            //check for Analytics settings
+            var socialSelector = document.getElementById('gdrp-social-selector');
+            if (typeof (socialSelector) != 'undefined' && socialSelector != null) {
+
+                if (document.cookie.split(';').filter((item) => item.includes('acceptSocial=1')).length) {
+                    $('input#checkboxSocial').prop("checked", true);
+                } else {
+                    $('input#checkboxSocial').prop("checked", false);
+                }
+            }
+            //end analytics settings check
+
+            $('input#checkboxAnalytics').on('change', function () {
+                if (this.checked) {
+                    setCookie('acceptAnalytics', '1', 365);
+                    setAcceptAnalytics();
+                    loadExternalScripts();
+
+                } else {
+                    setCookie('acceptAnalytics', '0', 365);
+                    gaOptout();
+                }
+            })
+
+            $('input#checkboxSocial').on('change', function () {
+                if (this.checked) {
+                    setCookie('acceptSocial', '1', 365)
+                    setAcceptAnalytics();
+                    loadExternalScripts();
+
+                } else {
+                    setCookie('acceptSocial', '0', 365)
+                    facebookLogout();
+                    vimeoOptOut();
+                    //gaOptout();
+                }
+            })
+            // FB.logout(function () { document.location.reload(); });
+        }
+    </script>
+
+
+</head>
+<body class="dark  single-article   ">
+
+
+<div id="menu-container"> <!-- container for TBWA logo, menu button and menu overlay -->
+    <div id="menu-dark-bg"></div>
+    <div id="menu-slash-bg">
+        <div id="menus">
+            <!-- main menu -->
+            <div id="main-menu">
+                <ul>
+                    <li class="menu-label"><a href="../disruption.html"><span>Disruption<sup>®</sup></span></a></li>
+                    <li class="menu-label"><a href="../work.html" class="active"><span>Проекты</span></a></li>
+                    <li class="menu-label"><a href="../our-team.html"><span>Люди</span></a></li>
+                    <li class="menu-label"><a href="../about.html"><span>TBWA\</span></a></li>
+                </ul>
+            </div>
+            <!--/#main-menu-->
+
+            <div id="sub-menu">
+                <div id="inner-sub-menu">
+                    <!-- secondary menu -->
+                    <div id="secondary-menu-container">
+                        <div id="secondary-menu">
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <!--/#secondary-menu-->
+                    </div>
+                    <!--/#secondary-menu-container-->
+
+                    <div id="contact-info-container">
+                        <!-- email contacts -->
+                        <div id="contact-info">
+                            <h3></h3>
+                            <p class="name"></p>
+                            <a class="email" href="mailto:"></a>
+                            <h3></h3>
+                            <p class="name"></p>
+                            <a class="email" href="mailto:"></a>
+                        </div>
+
+                        <!-- office address -->
+                        <div id="office-address">
+                            <h3></h3>
+                            <span class="address">
+                <p><strong>Управление талантами</strong></p>
+<p><a target="_blank" rel="noreferrer" data-behavior="truncate" href="mailto:rus-hr@tbwa.ru">rus-hr@tbwa.ru</a></p>
+<p>ᅠ</p>
+<p><a href="mailto:ekaterina.volnistova@tbwa.ru"></a></p>
+<p><strong>Предложения о сотрудничестве</strong></p>
+<p><a href="mailto:hello@tbwa.ru">hello@tbwa.ru</a></p>
+<p>ᅠ</p>
+<p>Павелецкая площадь, д. 2, стр. 1, этаж 12</p>
+<p>115054, Москва, Россия</p><br>
+                <a class="phone" href="tel:+7 (495) 544-59-49">+7 (495) 544-59-49</a>
+              </span><br>
+                            <a class="email" href="mailto:"></a>
+                        </div>
+                    </div>
+                    <!--/#office-addresses-->
+                </div>
+                <!-- social icons -->
+                <div id="social-icons">
+                </div>
+                <!--/#social-icons-->
+            </div>
+            <!--/#sub-menu-->
+        </div>
+        <!--/#menus-->
+    </div>
+    <!--/#menu-slash-bg-->
+</div>
+<!--/#menu-container-->
+
+
+<div id="menu-language-toggle" class="white">
+    <ul>
+        <li class="nav__item "><a href="../../work/datsun-workout.html">EN</a></li>
+        <li class="divider"> \</li>
+        <li class="nav__item current"><a href="datsun-workout.html">RU</a></li>
+    </ul>
+</div>
+<!--/#menu-language-toggle-->
+
+<div id="logo-container">
+    <div id="logo" class="white-logo">
+        <a href="../index.htm" class="tbwa-homepage" id="tbwa-logo">
+            <img src="../../assets/about/tbwa_logo_white.png">
+        </a>
+    </div>
+</div>
+<!--/#logo-container-->
+
+<div id="menu-button" class="burger-white"> <!-- menu button -->
+    <svg id="hamburger-top-svg" class="hamburger-svg" viewbox="0 0 40 6" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon points="0,0 40,0 40,6 0,6"></polygon>
+    </svg>
+    <svg id="hamburger-bottom-svg" class="hamburger-svg" viewbox="0 0 40 6" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon points="0,0 40,0 40,6 0,6"></polygon>
+    </svg>
+</div><!-- end menu button -->
+
+
+<section id="featured-media">
+
+    <div class="vid-cover" style="background-image:url(../../assets/work/DATSUN_ONDO_FITNESS_main_img.jpg)">
+        <div class="image-darken"></div>
+    </div>
+    <div class="featured-media-overlay" style="position: absolute;top: 28vh;left: 20vw;z-index: 9;color: #fff;">
+        <div class="client-date"
+             style="font-family: 'Averta Bold',Open Sans Bold,Open Sans Hebrew Semibold,Noto Sans SC Bold,Helvetica Neue,sans-serif;font-size: 23px;margin-top: 40px;  margin-left: 35px; direction: ltr;">
+            <span class="client">Datsun</span><span class="location"></span>
+        </div>
+
+        <div class="headline" style="transform: skewX(20deg);padding-top: 30px;">
+            <h1>Уличная атлетика.</h1>
+            <h1>Бери выше!</h1>
+        </div> <!-- headline -->
+
+    </div>
+    <!--/.vid-cover-->
+
+
+    <div class="vid-container">
+        <div id="vid-wrapper">
+            <iframe id="article-featured-video"
+                    data-url="https://player.vimeo.com/video/330062053?dnt=1&autoplay=0& api=1" frameborder="0"
+                    webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay"></iframe>
+            <div id="frame-shield"></div>
+        </div>
+        <div class="vid-controls">
+            <div class="vid-play">
+                <a href="#" id="vid-play-btn">play</a>
+            </div> <!--/.vid-play-->
+
+            <div class="vid-progress" id="vid-progress-bar">
+                <span class="meter"></span>
+                <span class="progress-dot"></span>
+            </div> <!--/.vid-progress-->
+
+            <div class="vid-fullscreen">
+                <a href="#" id="fullscreen">fullscreen video</a>
+            </div><!--/.vid-fullscreen-->
+
+            <div class="vid-close">
+                <a href="#" id="vid-close">close video</a>
+            </div><!--/.vid-close-->
+        </div><!--/.vid-controls-->
+    </div><!--/.vid-container-->
+
+</section><!--/#featured-media-->
+
+<div id="article-slash">
+</div>
+<!-- end slash -->
+
+<section id="article-content">
+    <div class="grid-container">
+
+        <div class="row">
+            <div class="small-offset-2 xlarge-5 large-6 medium-8 small-11 columns">
+                <div id="main-copy">
+                    <div class="blurb">Datsun – Бери выше!</div>
+                    <div class="article-copy">Часть жителей регионов России убеждена, что в их реальности им никогда и
+                        ничего не добиться. Datsun переубедил их и вдохновил на стремление к большему. Ведь чтобы
+                        достичь цели, нужно не так уж и много. <br>
+                        <br>
+                        • Эту мысль мы донесли до людей с помощью вдохновляющего видеоманифеста уличной атлетики (более
+                        2 млн органических просмотров).<br>
+                        • Затем мы отправились на улицы городов, где провели развлекательные мероприятия, продвигающие
+                        культуру воркаута (тысячи посетителей и сотни заявок на тест-драйв).<br>
+                        • В конце мы запустили вирусный челлендж. В нём более 20 000 атлетов из разных городов
+                        соревновались, чтобы выиграть современную уличную тренировочную площадку для своего региона.<br>
+                        <br>
+                        Так Datsun разбудил в жителях регионов России стремление к достижениям и показал им реальный
+                        способ полностью изменить свою жизнь.
+                    </div>
+                </div><!--/.main-copy-->
+            </div>
+        </div>
+
+        <div class="row" id="awards-share">
+            <div class="large-offset-1 small-offset-2 large-1 small-2 columns">
+                <h2>Награды</h2>
+            </div>
+            <div id="awards" class="xlarge-3 large-4 medium-10 small-8 small-offset-1 medium-offset-0 columns end">
+                <div id="award-copy">
+                    <p class="award-desc">2019 CLIO Sports — Cеребро \ Social Media</p>
+                    <p class="award-desc">2019 CLIO Sports — Бронза \ Integrated Campaign</p>
+                    <p class="award-desc">2019 Silver Mercury — Золото \ Лучшая кампания спортивного маркетинга /
+                        маркетинга киберспорта</p>
+                    <p class="award-desc">2019 Silver Mercury — Шорт-лист \ Лучшая интегрированная маркетинговая
+                        кампания</p>
+                </div>
+            </div>
+
+            <div class="large-1 large-offset-1 small-2 small-offset-2 columns article-share" style="display: none;">
+                <h2>Share</h2>
+            </div>
+            <div class="large-4 small-8 small-offset-1 medium-offset-0 columns end article-share"
+                 style="display: none;">
+                <!-- 				<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+-->
+                <a href="https://twitter.com/intent/tweet?text=Datsun%20%22%D0%A3%D0%BB%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D0%B0%D1%82%D0%BB%D0%B5%D1%82%D0%B8%D0%BA%D0%B0.%20%D0%91%D0%B5%D1%80%D0%B8%20%D0%B2%D1%8B%D1%88%D0%B5%21%22%20by%20%40TBWA&url=https://www.tbwa.ru/ru/work/datsun-workout"
+                   class="twitter-share">Share on Twitter</a>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class=" ">
+                <div class="vid-container " style="display: none;">
+                    <div class="video-wrapper">
+                        <iframe class="article-video" data-url="https://player.vimeo.com/video/330062053?autoplay=0"
+                                frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
+                                height="auto" width="100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" ">
+                <div class="img-container ">
+                    <img src="../../assets/work/Clio_HD.jpg">
+                </div>
+            </div>
+
+
+            <div class=" ">
+                <div class="img-container ">
+                    <img src="../../assets/work/Datsun_Workout_leaflet_mockup_r12-1329.jpg">
+                </div>
+            </div>
+
+
+            <div class=" ">
+                <div class="img-container ">
+                    <img src="../../assets/work/pasted-image-1780.jpg">
+                </div>
+            </div>
+
+
+            <div class=" ">
+                <div class="img-container ">
+                    <img src="">
+                </div>
+            </div>
+
+        </div>
+        <!--/.row -->
+        <div class="row">
+            <div class="columns large-14" id="back-to-parent">
+                <a href="../work.html">Больше работ</a>
+            </div>
+        </div><!--/.row -->
+
+    </div><!--/.grid-container-->
+</section>
+
+
+<footer>
+    <div class="row grid-container" id="footer-menus">
+        <div class="columns large-3 large-offset-1 medium-10 medium-offset-2 small-14 small-offset-0 mobile-hide"
+             id="footer-logo-container">
+            <a href="../index.htm" id="footer-logo">
+                <img src="../../assets/about/footer_logo.png">
+            </a>
+        </div>
+        <div class="columns large-2 large-offset-1 medium-7 medium-offset-0 small-0 end">
+            <div id="footer-main-menu">
+                <div id="main-menu">
+                    <ul>
+                        <li class="menu-label"><h4><a href="../disruption.html"><span>Disruption<sup>®</sup></span></a>
+                        </h4></li>
+                        <li class="menu-label"><h4><a href="../work.html" class="active"><span>Проекты</span></a></h4>
+                        </li>
+                        <li class="menu-label"><h4><a href="../our-team.html"><span>Люди</span></a></h4></li>
+                        <li class="menu-label"><h4><a href="../about.html"><span>TBWA\</span></a></h4></li>
+                    </ul>
+                </div>
+                <!--/#main-menu-->
+            </div>
+            <!--/#footer-main-menu-->
+            <div id="footer-secondary-menu">
+                <div id="secondary-menu">
+                    <ul>
+                    </ul>
+                </div>
+                <!--/#secondary-menu-->
+            </div>
+            <!--/#footer-main-menu-->
+
+        </div>
+        <!--/.columns-->
+
+        <div class="columns large-6 large-offset-0 medium-14 medium-offset-0 small-14">
+            <div class="row">
+                <div class="columns large-7 large-offset-0">
+            <span class="block inquiries">
+              <h3></h3>
+              <p class="name small"></p>
+              <a class="email" href="mailto:"></a>
+            </span>
+                    <!--/.block-->
+                    <span class="block inquiries">
+              <h3></h3>
+              <p class="name small"></p>
+
+              <a class="email" href="mailto:"></a>
+            </span>
+                    <!--/.block-->
+                </div>
+                <!--/.columns-->
+                <div class="columns large-6 large-offset-1">
+          <span class="block contact">
+
+            <p class="small">
+              <p><strong>Управление талантами</strong></p>
+<p><a target="_blank" rel="noreferrer" data-behavior="truncate" href="mailto:rus-hr@tbwa.ru">rus-hr@tbwa.ru</a></p>
+<p>ᅠ</p>
+<p><a href="mailto:ekaterina.volnistova@tbwa.ru"></a></p>
+<p><strong>Предложения о сотрудничестве</strong></p>
+<p><a href="mailto:hello@tbwa.ru">hello@tbwa.ru</a></p>
+<p>ᅠ</p>
+<p>Павелецкая площадь, д. 2, стр. 1, этаж 12</p>
+<p>115054, Москва, Россия</p>
+
+            <a class="phone" href="tel:+7 (495) 544-59-49">+7 (495) 544-59-49</a>
+            <a class="email" href="mailto:"></a>
+          </span>
+
+
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.columns-->
+        <div class="columns large-6 large-offset-0 medium-14 medium-offset-0 end">
+            <div class="row">
+                <div class="columns large-6 large-offset-8">
+                </div>
+            </div>
+            <!--/.rows-->
+        </div>
+        <!--/.columns-->
+        <div id="footer-language-toggle">
+            <ul>
+                <li class="nav__item "><a href="../../index.htm">EN</a></li>
+                <li class="divider"> \</li>
+                <li class="nav__item current"><a href="../index.htm">RU</a></li>
+            </ul>
+        </div>
+        <!--/#footer-language-toggle-->
+
+    </div>
+    <!--/.row-->
+
+    <div class="grid-container" id="legal">
+        <div class="row">
+            <div class="columns large-offset-1 large-6">
+        <span>
+          Все права защищены
+        </span>
+            </div>
+            <div class="columns large-6 end medium-14 medium-offset-0">
+                <a href="../terms-of-service.html">Условия предоставления услуг</a> <a href="../privacy-policy.html">Политика
+                конфиденциальности</a> <a href="../cookie-policy.html">Cookie Policy</a>
+                <a href="https://tbwa.com" target="_blank">TBWA\Worldwide</a>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+
+
+</body>

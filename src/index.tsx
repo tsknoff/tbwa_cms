@@ -8,6 +8,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Work from "./components/work/Work";
 import {Provider} from "react-redux";
 import {setupStore} from "./store/store";
+import NotFoundPage from "./components/notFoundPage/NotFoundPage";
+import Editor from "./components/editor/Editor";
+import Create from "./components/editor/create/Create";
+import Edit from "./components/editor/edit/Edit";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,7 +24,11 @@ root.render(
                 <Routes>
                     <Route path="/" element={<App />}>
                         <Route path="work" element={<Work />} />
-                        <Route path="*" element={<Work />} />
+                        <Route path="create" element={<Create />} />
+                        <Route path="edit" element={<Edit />}>
+                            <Route path=":editId" element={<Edit />} />
+                        </Route>
+                        <Route path="*" element={<NotFoundPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -30,6 +30,9 @@
 .menu-link{
   text-decoration: none;
 }
+.button-link{
+  text-decoration: none;
+}
 
 @keyframes App-logo-spin {
   from {
