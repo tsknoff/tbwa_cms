@@ -1,18 +1,14 @@
-import React, {ChangeEventHandler, FC, useState} from 'react';
-import InputLabel from "@mui/material/InputLabel";
-import Select, {SelectChangeEvent} from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
+import React, {FC, useState} from 'react';
 import {FormControl} from "@mui/material";
-import WorkItem from "../../work/WorkItem";
 import TextField from "@mui/material/TextField";
 
 interface MyTextFieldProps{
     label: string;
     onChange: any;
-
+    multiline ?: boolean
 }
 
-const MyTextField:FC<MyTextFieldProps> = ({label, onChange}) => {
+const MyTextField:FC<MyTextFieldProps> = ({label, onChange, multiline}) => {
     const [value, setValue] = useState('')
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,11 +17,21 @@ const MyTextField:FC<MyTextFieldProps> = ({label, onChange}) => {
     }
     return (
         <FormControl fullWidth>
-            <TextField
-                id="filled-textarea"
-                label={label}
-                onChange={handleChange}
-            />
+            {multiline &&
+                <TextField
+                    id="filled-textarea"
+                    label={label}
+                    multiline
+                    onChange={handleChange}
+                />
+            }
+            {!multiline &&
+                <TextField
+                    id="filled-textarea"
+                    label={label}
+                    onChange={handleChange}
+                />
+            }
         </FormControl>
     );
 };

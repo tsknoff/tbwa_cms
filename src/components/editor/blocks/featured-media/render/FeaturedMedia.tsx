@@ -1,6 +1,4 @@
 import React, {FC} from 'react';
-import WorkItem from "../../../../../work/WorkItem";
-import {renderToString} from "react-dom/server";
 
 interface FeaturedMediaProps{
     client: string;

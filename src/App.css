@@ -33,6 +33,11 @@
 .button-link{
   text-decoration: none;
 }
+.block__wrapper{
+  max-width: 800px;
+  margin: auto;
+  overflow: auto;
+}
 
 @keyframes App-logo-spin {
   from {

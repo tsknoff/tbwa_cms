@@ -1,29 +1,8 @@
 import React, {FC} from 'react';
-import WorkItem from "../../../../../work/WorkItem";
-import {renderToString} from "react-dom/server";
-import {TBWA_ASSETS_URL, TBWA_SITE_URL} from "../../../../../../services/PageService";
+import {TBWA_ASSETS_URL, TBWA_SITE_URL} from "../../../../../services/PageService";
+import {IArticleContentProps} from "../model/IArticleContent";
 
-interface IMedia{
-    id: number;
-    order: number;
-    type: string;
-    src: string;
-}
-interface ILabelMoreWorks{
-    label: string;
-    src: string;
-}
-interface ArticleContentProps{
-    bodyTitle: string;
-    bodyText: string[];
-    awardsTitle: string;
-    awardsBody: string[];
-    share: boolean;
-    media: IMedia[];
-    labelMoreWorks: ILabelMoreWorks;
-}
-
-const ArticleContent: FC<ArticleContentProps> =
+const ArticleContent: FC<IArticleContentProps> =
     ({
          bodyTitle,
          bodyText,
@@ -91,7 +70,7 @@ const ArticleContent: FC<ArticleContentProps> =
                         <div className=" ">
                             {media && media.map(content =>
                                 <div className="img-container " key={content.id}>
-                                    <img src={TBWA_ASSETS_URL + content.src} />
+                                    <img alt="asset" src={TBWA_ASSETS_URL + content.src} />
                                 </div>
                             )}
                         </div>
