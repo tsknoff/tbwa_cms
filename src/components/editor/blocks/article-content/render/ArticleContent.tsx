@@ -76,11 +76,11 @@ const ArticleContent: FC<IArticleContentProps> =
                         </div>
                     }
                 </div>
-                <div className="row">
-                    <div className="columns large-14" id="back-to-parent">
-                        <a href={TBWA_SITE_URL + labelMoreWorks.src }>{labelMoreWorks.label}</a>
-                    </div>
-                </div>
+                {/*<div className="row">*/}
+                {/*    <div className="columns large-14" id="back-to-parent">*/}
+                {/*        <a href={TBWA_SITE_URL + labelMoreWorks.src }>{labelMoreWorks.label}</a>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
 

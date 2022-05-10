@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 
 const WorkContainer = () => {
     const {data: pages, error, isLoading} = pageAPI.useFetchAllPagesByTypeQuery('work')
+
     //pageAPI.endpoints.fetchAllPages.select(type)
     return (
         <List sx={{ width: '100%', maxWidth: 1, bgcolor: 'background.paper' }}>

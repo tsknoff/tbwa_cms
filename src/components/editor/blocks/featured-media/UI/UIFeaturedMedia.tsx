@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {IBlockData} from "../../article-content/UI/UIArticleContent";
 
-const UiFeaturedMedia = () => {
+const UIFeaturedMedia:FC<IBlockData> = ({id, blocks, setBlocks}) => {
     return (
         <div>
             
@@ -8,4 +9,4 @@ const UiFeaturedMedia = () => {
     );
 };
 
-export default UiFeaturedMedia;
+export default UIFeaturedMedia;

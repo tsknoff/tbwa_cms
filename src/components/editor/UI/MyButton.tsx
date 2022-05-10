@@ -20,7 +20,7 @@ const MyButton:FC<MyButtonProps> = ({value, label, onClick}) => {
         onClick(e)
     }
     return (
-        <Button onClick={handleClick} variant="contained" >
+        <Button onClick={handleClick} variant="contained" style={{margin: "15px"}} >
             {value}
         </Button>
     );

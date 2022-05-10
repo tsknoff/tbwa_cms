@@ -5,15 +5,29 @@ import TextField from "@mui/material/TextField";
 interface MyTextFieldProps{
     label: string;
     onChange: any;
-    multiline ?: boolean
+    multiline ?: boolean;
+    defaultValue ?: string;
 }
 
-const MyTextField:FC<MyTextFieldProps> = ({label, onChange, multiline}) => {
+const MyTextField:FC<MyTextFieldProps> =
+    ({
+         label,
+         onChange,
+         multiline,
+         defaultValue
+    }) => {
     const [value, setValue] = useState('')
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value)
         onChange(e.target.value)
+    }
+    let _defaultValue = '';
+
+    if (defaultValue) {
+         _defaultValue = defaultValue
+    }else{
+        _defaultValue = ''
     }
     return (
         <FormControl fullWidth>
@@ -21,6 +35,7 @@ const MyTextField:FC<MyTextFieldProps> = ({label, onChange, multiline}) => {
                 <TextField
                     id="filled-textarea"
                     label={label}
+                    defaultValue={_defaultValue}
                     multiline
                     onChange={handleChange}
                 />
@@ -29,6 +44,7 @@ const MyTextField:FC<MyTextFieldProps> = ({label, onChange, multiline}) => {
                 <TextField
                     id="filled-textarea"
                     label={label}
+                    defaultValue={_defaultValue}
                     onChange={handleChange}
                 />
             }

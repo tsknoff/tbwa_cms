@@ -11,7 +11,10 @@ import {Outlet} from "react-router-dom";
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="text.secondary" align="center">
+        <Typography variant="body2" color="text.secondary" align="center" style={{
+            padding: "20px",
+            backgroundColor: 'transparent'
+        }}>
             {'Copyright © '}
             <Link color="inherit" href="https://cms.tbwa.ru/">
                 TBWA\CMS

@@ -14,6 +14,6 @@ export interface IArticleContentProps{
     awardsTitle: string;
     awardsBody: string[];
     share: boolean;
-    media: IMedia[];
-    labelMoreWorks: ILabelMoreWorks;
+    media?: IMedia[];
+    labelMoreWorks?: ILabelMoreWorks;
 }
